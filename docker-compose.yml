@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  host:
+    build:
+      context: ./host
+    ports:
+      - "3020:3020"
+  login:
+    build:
+      context: ./login
+    ports:
+      - "3010:3010"
+  data:
+    build:
+      context: ./data
+    ports:
+      - "3011:3011"
+  store:
+    build:
+      context: ./store
+    ports:
+      - "3012:3012"
